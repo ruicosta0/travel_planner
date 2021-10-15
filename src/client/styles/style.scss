@@ -1,0 +1,146 @@
+//main css stylesheet
+
+body{
+    background: #fffff8;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+#app{
+    display: grid;
+    grid-auto-rows: minmax(150px, auto);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-template-areas: "hed hed hed hed"
+                         "ln11 ln12 ln13 ln14"
+                         "ln21 ln22 ln23 ln24" 
+                         "ln31 ln32 ln32 ln32"
+                         "ftr ftr ftr ftr";
+    height:100vh;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    width: 80%;
+    margin-left: auto;
+    margin-right:auto;
+    border: solid 1px black;
+}
+
+//input fields
+.destination{
+    grid-area: ln11;
+    padding-left: 0.25em;
+}
+
+.date{
+    grid-area: ln12;
+}
+
+.countdown {
+    grid-area: ln21;
+    padding-left: 0.25em;
+}
+
+// background colours
+.holder {
+    background-color:#f0f0f5;
+}
+
+.display{
+    background-color:lightyellow;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:block;
+    font-size: 27px;
+    color: red;
+}
+
+input{
+    display:block;
+    height: 60px;
+    width: 320px;
+    background:#22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    text-align: center;
+}
+
+input:hover {
+    background-color:linen;
+    border: 1px solid black;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: #f0d43a; 
+    font-family: 'Oswald', sans-serif;
+
+} 
+
+//modify grid screen width
+@media only screen and (max-width: 1600px) {
+    #app{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(7, minmax(0, 1fr));
+        grid-template-areas: "hed hed"
+                            "ln11 ln12" 
+                            "ln13 ln14" 
+                            "ln21 ln22" 
+                            "ln23 ln24"
+                            "ln31 ln32"
+                            "ftr ftr";  
+    }
+
+    .holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destination{
+        grid-area: ln11;
+    }
+    
+    .date{
+        grid-area: ln12;
+    }
+    
+    .countdown {
+        grid-area: ln21;
+    }
+    .saved {
+        display:block
+    }
+}
+
+//modify grid screen nest hub
+@media only screen and (max-height: 881px) {
+    #app{
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    }
+    .tripDetails {
+        margin-bottom: 5px;
+    }
+}

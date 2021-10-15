@@ -1,0 +1,13 @@
+// css style sheet entering trip duration
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#counter{
+    grid-area: ln13;
+    width: 25%;
+    justify-content: center;
+}

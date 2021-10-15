@@ -1,0 +1,44 @@
+//display fields css - data returned from API or end point
+
+#count {
+    display:flex;
+    height: 60px;
+    width: 320px;
+    background:darkblue;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherDetails{
+    grid-area: ln22;
+}
+
+#forecast {
+    grid-area: ln22;
+    display:block;
+    font-size: 27px;
+    color: red;
+}
+
+.detail {
+    background: darkblue;
+    width: 320px;
+    height:30px;
+    justify-content: center;
+}
+
+.container_tripDetails {
+    grid-area: ln32;
+
+}
+
+#tripDetails_title {
+    grid-area:ln32;
+    display:block;
+    font-size: 27px;
+    color: red;
+}

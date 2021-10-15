@@ -1,0 +1,66 @@
+// css style sheet for buttons
+
+//general button formatting
+button{
+    width: 200px;
+    height: 60px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    border-radius: 10%;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: green;
+}
+
+// search button
+#btn{
+    grid-area: ln14;
+    padding-top: 35px;
+}
+
+// save trip button
+#saveBtn{
+    grid-area: ln24;
+    padding-top: 35px;
+}
+
+//find saved trip details from end point
+#find{
+    width:5em;
+    height:2em;
+    font-size: 1em;
+    margin-left: 1em; 
+}
+
+//remove saved trips from end point
+#remove{
+    width:5em;
+    height:2em;
+    font-size: 1em;
+}
+
+#remove:hover{
+    background-color:red;
+}
+
+//drop down - list saved trips
+#plannedTrips {
+    width:5em;
+    height:2em;
+    font-size: 1em;
+}
+
+//format for narrower screen width
+@media only screen and (max-width: 1600px) {
+    #find {
+        margin-left: 0em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+}

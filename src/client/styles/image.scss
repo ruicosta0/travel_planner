@@ -1,0 +1,16 @@
+// css style sheet for pixabay image
+
+.photo {
+    grid-area: ln23;
+}
+
+.image {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.image img {
+    object-fit: contain;
+    min-width: 100%;
+    min-height: 100%;
+}
