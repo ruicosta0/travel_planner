@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Travel Planner</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id = "app">
+  <div class ="headline">
+    <h1>Travel Planner</h1>
+  </div>
+  <div class ="holder destination">
+    <label for="dest">Where would you like to go?</label>
+    <input type="text" id="dest" placeholder="enter destination here">
+  </div>
+  <div class ="holder date">
+    <label for="date">When would you like to go?</label>
+    <input type="date" id="dateField" placeholder="enter departure date here">
+  </div>
+  <div class ="holder counter">
+    <label for="count">How many days are you going for?</label>
+    <input type="number" id="counter" placeholder="-">
+  </div>
+  <div class ="holder button" id ="btn">
+  </div>
+  <div class ="display countdown">
+    <label for="countdown">Countdown to departure</label>
+    <div id="count"></div>
+  </div>
+  <div class ="display weatherDetails">  
+    <div class = "display" id="forecast">Weather Forecast</div>
+    <div class = detail id = "temperature"></div> 
+    <div class = detail id = "rain"></div>
+    <div class = detail id = "description"></div>
+  </div>
+  <div class ="display photo">
+    <figure class = "image">
+      <a href="https://pixabay.com/">
+        <figcaption id="caption"></figcaption>
+      </a>
+    </figure>
+  </div>
+  <div class ="display button" id ="saveBtn">
+  </div>
+  <div class ="display dropdown">
+    <div class="display saved">
+      <label for="plannedTrips_title">Search planned trips</label>
+      <select name="plannedTrips" id = "plannedTrips"></select>
+      <button id="find">Find</button>
+      <button id="remove">Remove</button>
+  </div>
+  </div>  
+  <div class ="display container_tripDetails">
+    <div class="display" id="tripDetails_title">Trip Details</div>
+    <div class= "tripDetails" placeholder="Planned Trips">
+        <div class="detail" id="savedDestination"></div>
+        <div class="detail" id="savedDate"></div>
+        <div class="detail" id="savedDuration"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <ul>
+      <li><a href="">Terms of Use</a></li>
+      <li><a href="">About Travel Planner</a></li>
+      <li><a href="">Cookies</a></li>
+      <li><a href="">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+    </script>
+</body>
+</html>
